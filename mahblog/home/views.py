@@ -112,11 +112,6 @@ def handleLogin(request):
         else:
             return HttpResponse("Page not found-404")
 
-
-
-
-
-
 def handleLogout(request):
     logout(request)
     messages.success(request, " Logged Out Successfully.😊")

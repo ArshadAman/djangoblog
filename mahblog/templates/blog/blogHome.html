@@ -1,13 +1,7 @@
 
 {% extends "base.html" %}
-
 {% block content %}
 <style>
-    body {
-        font-family:sans-serif;
-        font-size: 18px;
-        background-color: white;
-    }
     
     .head_text {
         color: white;
@@ -21,19 +15,24 @@
 
 <div class="container">
 <hr><h3 >Blog Articles:</h3><hr>
-{% for post in allPosts %}
-<div class="card flex-md-row mb-4 box-shadow h-md-250">
-<div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-danger">Article by {{post.author}}</strong> Suggested By <a href="{{post.suggest}}" target="_blank"><em>{{post.suggest}}</em></a>
-              <h3 class="mb-0 my-2">
-                <a class="text-dark" href="/blog/{{post.slug}}">{{post.title}}</a>
-              </h3>
-              <div class="mb-1 text-muted">{{post.datetime}}</div>
-            <p class="card-text mb-auto"><div class="preview">{{post.content| truncatechars:450 | safe}}</div></p>
-              <a href="/blog/{{post.slug}}" role="button"class="btn btn-primary">Continue reading</a>
-            </div>
-</div>
-{% endfor %}
+    {% for post in allPosts %}
+    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+            
+                <div class="h-entry">
+                    <a href="{{post.slug}}">
+                    </a>
+                    <h2 class="font-size-regular"><a href="{{post.slug}}">{{post.title}}</a></h2>
+                    <div class="meta mb-4">{{post.author}} | <span class="mx-2 text-muted">Posted on - {{post.timeStamp}} </div>
+                            <br>
+                    <p>{{post.content| truncatechars:350 | safe}}</p>
+                    <p><a href="{{post.slug}}" class="btn btn-dark">Continue Reading</a></p>
+                </div>
+
+
+        </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
 

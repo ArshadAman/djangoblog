@@ -25,8 +25,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{%static 'img/favicon-32x32.png'%}">
   <link rel="icon" type="image/png" sizes="16x16" href="{%static 'img/favicon-16x16.png'%}">
   <link rel="manifest" href="{%static 'img/site.webmanifest'%}">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Russo+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
   <meta name="google" content="notranslate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -47,7 +46,7 @@
   <style>
       	p {
   	font-family: "Noto Sans JP";
-  	font-size: 1em;
+  	font-size: 18px;
   	}
     body {
       font-family: "Noto Sans JP 500";
@@ -90,9 +89,8 @@
     }
 
     .nav-link:hover {
-      /* font-size: 110%; */
-      transform: scale(1.1);
-      border-bottom: 1px solid beige;
+      transform: scale(0.9);
+      color: aqua;
     }
     .masthead {
         background-color: indigo;
@@ -119,7 +117,7 @@
           <a class="nav-link text-light" href="/blog">Blog</a>
         </li>
         <li class="nav-item" {%block progactive %}{%endblock progactive%}>
-          <a class="nav-link text-light" href="/programming">Programming</a>
+          <a class="nav-link text-light" href="/programming">Coding</a>
         </li>
 
         <li class="nav-item" {%block hackactive %}{%endblock hackactive%}>
@@ -175,7 +173,7 @@
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1 class=" site-heading my-4 mt-3 text-white">Mad About Hacking </h1>
-                    <p class="text-light" id="slogan">We Post On your Demand
+                    <p class="text-light" id="slogan">Smart Life That Matters
                     </p>
                 </div>
             </div>
