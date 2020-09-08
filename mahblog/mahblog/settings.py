@@ -11,12 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 #for gmail
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS=True
-EMAIL_USE_SSL=False
 EMAIL_HOSTS = 'smtp.gmail.com'
-EMAIL_HOSTS_USER='your gmail id'
-EMAIL_HOSTS_PASSWORD='your gmail password'
+EMAIL_HOSTS_USER='arshadaman202@gmail.com'
+EMAIL_HOSTS_PASSWORD='gssppjferwwtgccu'
 EMAIL_PORT=587
 
 from pathlib import Path
@@ -38,11 +37,11 @@ SECRET_KEY = '-s9(bl8h5l%--b#dmide*(0o8xeu&8xuc!)#*cwxib7^hrzr&z'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-else:
-    pass #This is for production level
+# else:
+#     pass #This is for production level
 
 # Application definition
 
@@ -60,7 +59,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'ckeditor',
     'social_django',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'django.contrib.sitemaps'
 ]
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 MEDIA_URL = '/media/' 
